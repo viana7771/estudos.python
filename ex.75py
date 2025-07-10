@@ -1,0 +1,14 @@
+cont = 0
+numero = list()
+
+for n in range(4):
+    num = int(input('Digite um número: '))
+    numero.append(num)
+    
+tupla_numero = tuple(numero)
+
+for n in tupla_numero:
+    if n == 9:
+        cont += 1
+
+print(f'O número 9 apareceu {cont} vezes.')
