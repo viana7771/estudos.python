@@ -20,6 +20,6 @@ for i in range(5):
             maior = n
             
 
-print(numero)
+print('Os valores sorteados foram:', end=' - ', *numero)
 print(f'Maior número: {maior}')
 print(f'Menor número: {menor}')
