@@ -45,3 +45,4 @@ print('\n')
 for posicao, i in enumerate(time):
     if i == 'Chapecoense':
         print(f'o time da Chapecoence esta na posição {posicao}°')
+        
