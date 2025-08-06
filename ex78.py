@@ -1,20 +1,21 @@
 valores = []
 
 for v in range(0, 5):
-    valores.append(int(input('Adicione um valor: ')))
-
-maior = valores[0]
-indice_maior = [i for i, v in enumerate(valores) if v == maior]
-
+    valores.append(int(input(f'Adicione um valor na posição {v}°: ')))
+    if v == 0:
+        maior = menor = valores[v]
+    else:
+        if valores[v] > maior:
+            maior = valores[v]
+        if valores[v] < menor:
+            menor = valores[v]
+print(f'Você digitou os valores {valores}')
+print(f'O maior número digitado foi {maior} nas posições ', end='')
 for i, v in enumerate(valores):
-    if v > maior:
-        maior = v
-        print(f'No indice {indice_maior} está o maior número da lista, {maior}')
-
-menor = valores[0]
-indice_menor = [i for i, v in enumerate(valores) if v == menor]
-
+    if v == maior:
+        print(f'{i}...', end='')
+print()
+print(f'O menor número digitado foi {menor} nas posições ', end='' )
 for i, v in enumerate(valores):
-    if v < menor:
-        menor = v
-        print(f'No indice {indice_menor} está o menor número da lista, {menor}')
+    if v == menor:
+        print(f'{i}...', end='') 
